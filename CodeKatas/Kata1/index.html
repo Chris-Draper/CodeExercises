@@ -6,20 +6,32 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <!-- Also apply a custom style sheet -->
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- load moment.js and js/main.js -->
+        <script src="build/main.bundle.js"></script>
     </head>
     <body>
         <h3 class="header">Moment.js Date Calculation CodeKata</h3>
-        <div class="content"></div>
         <div id="qunit"></div>
     <div id="qunit-fixture"></div>
     <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+    <script src="./node_modules/moment/moment.js"></script>
     <script>
-      test('Is QUnit Working?', function(assert) {
-        var result = [5, 6, 7];
-        var expected = [5, 6, 7];
-        assert.deepEqual(result, expected);
-      }); //use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/ - read it!
+        test('Is QUnit Working?', function(assert) {
+            var result = [5, 6, 7];
+            var expected = [5, 6, 7];
+            assert.deepEqual(result, expected);
+        });
+        test('Is the moment dependency working?', function(assert) {
+            var testDate = moment("2016-7-8");
+            var isValidDate = testDate.isValid();
+            assert.deepEqual(true, isValidDate);
+        });
+        test('Is the js method findStartDate() returning its param?', function(assert) {
+            var testDate = findStartDate(moment("2016-7-8"));
+            var expected = moment("2016-7-8");
+            assert.deepEqual(expected, testDate);
+        });
     </script>
     </body>
 </html>
