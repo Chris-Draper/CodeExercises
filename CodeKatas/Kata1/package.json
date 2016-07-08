@@ -2,7 +2,7 @@
   "name": "kata1",
   "version": "1.0.0",
   "description": "CodeKata exercise for date calculation",
-  "main": "main.js",
+  "main": "js/main.js",
   "scripts": {
     "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
     "start": "http-server"
