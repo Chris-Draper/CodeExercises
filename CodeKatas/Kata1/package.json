@@ -1,0 +1,30 @@
+{
+  "name": "kata1",
+  "version": "1.0.0",
+  "description": "CodeKata exercise for date calculation",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js", 
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris-Draper/JavaScript.git"
+  },
+  "keywords": [
+    "javascript",
+    "codekata"
+  ],
+  "author": "Chris Draper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris-Draper/JavaScript/issues"
+  },
+  "homepage": "https://github.com/Chris-Draper/JavaScript#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "http-server": "^0.9.0"
+  }
+}
