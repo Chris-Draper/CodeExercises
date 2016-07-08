@@ -1,7 +1,25 @@
 <html>
     <head>
+        <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
+        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+        <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <!-- Also apply a custom style sheet -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h3>Moment.js Date Calculation CodeKata</h3>
+        <h3 class="header">Moment.js Date Calculation CodeKata</h3>
+        <div class="content"></div>
+        <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
+    <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+    <script>
+      test('Is QUnit Working?', function(assert) {
+        var result = [5, 6, 7];
+        var expected = [5, 6, 7];
+        assert.deepEqual(result, expected);
+      }); //use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/ - read it!
+    </script>
     </body>
 </html>
